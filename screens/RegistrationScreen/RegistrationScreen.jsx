@@ -2,8 +2,8 @@ import React from "react";
 import { StyleSheet, Text, Image, Button } from "react-native";
 
 import Main from "../../components/Main/Main";
-import Input from "../../componentsInput/Input";
-import ClassicButton from "../../componentsClassicButton/ClassicButton";
+import Input from "../../components/Input/Input";
+import ClassicButton from "../../components/ClassicButton/ClassicButton";
 
 export default function RegistrationScreen() {
 	return (

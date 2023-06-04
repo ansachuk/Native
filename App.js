@@ -1,5 +1,4 @@
-import { StatusBar } from "expo-status-bar";
-import { StyleSheet, Text, View, ImageBackground, SafeAreaView } from "react-native";
+import { StyleSheet, View, ImageBackground } from "react-native";
 
 import LoginScreen from "./screens/LoginScreen/LoginScreen";
 import RegistrationScreen from "./screens/RegistrationScreen/RegistrationScreen";
@@ -9,7 +8,8 @@ export default function App() {
 	return (
 		<View style={styles.container}>
 			<ImageBackground style={styles.image} resizeMode="cover" source={require("./img/startScreenBG.webp")}>
-				<RegistrationScreen></RegistrationScreen>
+				{/* <RegistrationScreen /> */}
+				<LoginScreen />
 			</ImageBackground>
 		</View>
 	);

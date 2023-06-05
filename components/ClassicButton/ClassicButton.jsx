@@ -1,9 +1,9 @@
 import React from "react";
 import { Text, TouchableOpacity, StyleSheet } from "react-native";
 
-export default function ClassicButton({ title }) {
+export default function ClassicButton({ title, onPress }) {
 	return (
-		<TouchableOpacity activeOpacity={0.6} style={styles.button}>
+		<TouchableOpacity onPress={onPress} activeOpacity={0.6} style={styles.button}>
 			<Text style={styles.text}>{title}</Text>
 		</TouchableOpacity>
 	);

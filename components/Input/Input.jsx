@@ -1,20 +1,22 @@
+import { useRef } from "react";
 import { TextInput, StyleSheet, KeyboardAvoidingView, Platform } from "react-native";
 
-export default function Input({ placeholder, type = "text", hidden = false, value = "", onChangeText }) {
+export default function Input({ placeholder, type = null, hidden = false, value = "", onChangeText }) {
+	const inputRef = useRef();
+
 	return (
-		<KeyboardAvoidingView behavior={Platform.OS == "ios" ? "padding" : "height"}>
-			<TextInput
-				onChangeText={onChangeText}
-				value={value}
-				enablesReturnKeyAutomatically={true}
-				autoCorrect={false}
-				secureTextEntry={hidden}
-				autoComplete={type && type !== "text" && type}
-				inputMode={type}
-				style={styles.input}
-				placeholder={placeholder}
-			/>
-		</KeyboardAvoidingView>
+		<TextInput
+			ref={inputRef}
+			onChangeText={onChangeText}
+			value={value}
+			enablesReturnKeyAutomatically={true}
+			autoCorrect={false}
+			secureTextEntry={hidden}
+			autoComplete={type && type !== "text" && type}
+			inputMode={type}
+			style={styles.input}
+			placeholder={placeholder}
+		/>
 	);
 }
 

@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Button, StyleSheet, Text } from "react-native";
+import { Button, StyleSheet, Text, KeyboardAvoidingView, Platform } from "react-native";
 
 import Main from "../../components/Main/Main";
 import Input from "../../components/Input/Input";
@@ -40,4 +40,8 @@ const styles = StyleSheet.create({
 		// position: "relative",
 		// top: -28,
 	},
+
+	// container: {
+	// 	flex: 1,
+	// },
 });

@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { StyleSheet, Text, Image, Button } from "react-native";
+import { StyleSheet, Text, Image, Button, KeyboardAvoidingView } from "react-native";
 
 import Main from "../../components/Main/Main";
 import Input from "../../components/Input/Input";
@@ -21,8 +21,11 @@ export default function RegistrationScreen() {
 	return (
 		<Main height="70">
 			<Image style={styles.userImage}></Image>
-			<Text style={styles.title}>Реєстрація</Text>
-			<Input type="text" placeholder="Логін" value={name} onChangeText={setName} />
+			<Text type="text" style={styles.title}>
+				Реєстрація
+			</Text>
+
+			<Input placeholder="Логін" value={name} onChangeText={setName} />
 			<Input type="email" placeholder="Адреса електронної пошти" value={email} onChangeText={setEmail} />
 			<Input placeholder="Пароль" hidden value={pass} onChangeText={setPass} />
 			<ClassicButton title="Зареєстуватися" onPress={onRegistrationPress} />
